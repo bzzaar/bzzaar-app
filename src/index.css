@@ -1,0 +1,215 @@
+:root {
+	font-size: 6px;
+	font-family: var(--font1);
+	position: relative;
+	/* GLOBAL STYLES */
+
+	/* Mainnet COLORS */
+
+	--swarm-red: #f63333;
+	--swarm-light-red: #ff5d5d;
+	--swarm-grey-01: #414141;
+	--swarm-grey-02: #333333;
+	--swarm-charcoal-01: #3b3b3b;
+	--swarm-charcoal-02: #2e2e2e;
+	--swarm-cement-dark-02: #c1c1c1;
+	--swarm-cement-dark-01: #e3e3e3;
+	--swarm-cement: #f0f0f0;
+	--swarm-orange: #dd7200;
+	--swarm-orange-highlight: #f4944d;
+	--swarm-black: #232223;
+	--swarm-almost-black: #242424;
+	--pure-white: white;
+	--pure-black: black;
+	--swarm-almost-white: #fafafa;
+	--blackOverlay: rgba(0, 0, 0, 0.74);
+
+	--goerli-primary: #3f8ea6;
+	--goerli-secondary: #94e5fd;
+
+	/* Navbar Glow */
+	--mainnet-navbar-glow: none;
+	--goerli-navbar-glow: 0px 0px 8rem #3f8ea6;
+
+	/* MainModal Glow */
+
+	/* udfgirsu */
+	--mainnet-glow-shadow: 0px 0px 20rem 15rem #dd72000e;
+	--goerli-glow-shadow: 0px 0px 20rem 15rem #3f8ea638;
+
+	/* Goerli COLORS */
+
+	--goerli-black: #282828;
+	--goerli-black2: #242424;
+	--goerli-green1: #33ff00;
+	--goerli-green2: #33ff33;
+	--goerli-green3: #00ff33;
+	--goerli-green4: #66ff66;
+	--goerli-green5: #00ff66;
+	--goerli-orange1: #ffb000;
+	--goerli-orange2: #ffcc00;
+	--goerli-red: #ff5d5d;
+	--goerli-grey: #919c9f;
+
+	--glow-goerli: ;
+	--glow-rinkeby: ;
+	--glow-mainnet: ;
+	--glow-ropsten: ;
+
+	/* FONTS */
+	--font1: 'Work Sans', sans-serif;
+	--font2: 'IBM Plex Mono', monospace;
+	--goerli-font: 'Source Code Pro', monospace;
+
+	/* BOX SHADOWS */
+
+	--boxShadow-topContainer: 0px 4rem 4rem 0px rgba(0, 0, 0, 0.281);
+	--boxShadow-addressBar: 0px 0px 2rem 0px rgba(0, 0, 0, 0.35);
+	--boxShadow1: 0px 0px 40px 0px rgba(0, 0, 0, 0.25);
+	--boxShadow2: 0px 0px 60px 0px rgba(0, 0, 0, 0.35);
+	--receiveShadow: -40px 0px 40px rgba(0, 0, 0, 0.33);
+	--sendShadow: 40px 0px 40px 0px rgba(0, 0, 0, 0.33);
+	--slippageChipShadow: 0px 0px 1.4rem 0px rgba(0, 0, 0, 0.33);
+	--tokenChipShadow: 0px 0px 2rem 0px rgba(0, 0, 0, 0.33);
+
+	--transition1: all 200ms ease-out;
+
+	--tabletBreakpoint: 1000px;
+	--smallLaptopBreakpoint: 1441px;
+	--largeScreenBreakpoint: 1919px;
+}
+
+.web3modal-modal-lightbox {
+	z-index: 5 !important;
+	font-family: var(--font1);
+}
+.web3modal-modal-card {
+	border-radius: 0px !important;
+}
+.web3modal-provider-name {
+	font-weight: 400 !important;
+}
+.web3modal-provider-description {
+	font-weight: 500 !important;
+}
+.web3modal-provider-container {
+	border-radius: 0px !important;
+}
+
+/* media queries */
+@media screen and (min-width: 1000px) {
+	:root {
+		font-size: 7px;
+	}
+}
+@media screen and (min-width: 1441px) {
+	:root {
+		font-size: 8px;
+	}
+}
+
+@media screen and (min-width: 1921px) {
+	:root {
+		font-size: 10px;
+	}
+}
+input {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+button {
+	border: none;
+	cursor: pointer;
+}
+button:active {
+	outline: none;
+}
+button:focus {
+	outline: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font1);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+@keyframes pulsingGlow {
+	0% {
+		border-color: 'inherit';
+		box-shadow: 0 0 0 var(--swarm-orange-highlight) inset;
+	}
+	50% {
+		border-color: var(--swarm-orange-highlight);
+		box-shadow: 0 0 2rem var(--swarm-orange-highlight) inset;
+	}
+	100% {
+		border-color: 'inherit';
+		box-shadow: 0 0 0 var(--swarm-orange-highlight) inset;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+/* h1 {
+  font-size: 3.4rem;
+  font-weight: 400;
+  font-family: var(--font2);
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: var(--font2);
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: var(--font2);
+}
+h4 {
+  font-family: var(--font2);
+  font-size: 2rem;
+  font-weight: 400;
+}
+h5 {
+  font-family: var(--font1);
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--font1);
+  font-size: 1.4rem;
+  font-weight: 500;
+} */
+/* p2 {
+  font-family: var(--font1);
+  font-size: 3.2rem;
+  font-weight: 400;
+} */
